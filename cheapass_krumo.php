@@ -32,7 +32,7 @@ function cheapass_krumo(&$var, $var_name = NULL, $indent = NULL, $reference = NU
         $real_var = &$var[$keyvar];
         $real_name = &$var[$keyname];
         $type = ucfirst(gettype($real_var));
-        echo "$indent$var_name <span style='color:#666666'>$type</span> = <span style='color:#e87800;'>&amp;$real_name</span><br>";
+        echo "$indent$var_name $type = &amp;$real_name<br>";
     }
     else
     {
@@ -40,6 +40,7 @@ function cheapass_krumo(&$var, $var_name = NULL, $indent = NULL, $reference = NU
         $avar = &$var[$keyvar];
 
         $type = ucfirst(gettype($avar));
+        //TODO: replace colors by vars
         if($type == "String") $type_color = "<span style='color:green'>";
         elseif($type == "Integer") $type_color = "<span style='color:red'>";
         elseif($type == "Double"){ $type_color = "<span style='color:#0099c5'>"; $type = "Float"; }
@@ -49,18 +50,18 @@ function cheapass_krumo(&$var, $var_name = NULL, $indent = NULL, $reference = NU
         if(is_array($avar))
         {
             $count = count($avar);
-            echo "$indent" . ($var_name ? "$var_name => ":"") . "<span style='color:#666666'>$type ($count)</span><br>$indent(<br>";
+            echo "$indent" . ($var_name ? "$var_name => ":"") . "$type ($count)<br>$indent(<br>";
             $keys = array_keys($avar);
             foreach($keys as $name)
             {
                 $value = &$avar[$name];
-                do_dump($value, "['$name']", $indent.$do_dump_indent, $reference);
+                cheapass_krumo($value, "['$name']", $indent.$do_dump_indent, $reference);
             }
             echo "$indent)<br>";
         }
         elseif(is_object($avar))
         {
-            echo "$indent$var_name <span style='color:#666666'>$type</span><br>$indent(<br>";
+            echo "$indent$var_name $type<br>$indent(<br>";
             foreach($avar as $name=>$value) do_dump($value, "$name", $indent.$do_dump_indent, $reference);
             echo "$indent)<br>";
         }
