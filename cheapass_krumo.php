@@ -27,12 +27,14 @@ function cheapass_krumo(&$var, $var_name = NULL, $indent = NULL, $reference = NU
     $reference = $reference.$var_name;
     $keyvar = 'the_do_dump_recursion_protection_scheme'; $keyname = 'referenced_object_name';
 
+    echo '<details>';
+
     if (is_array($var) && isset($var[$keyvar]))
     {
         $real_var = &$var[$keyvar];
         $real_name = &$var[$keyname];
         $type = ucfirst(gettype($real_var));
-        echo "$indent$var_name $type = &amp;$real_name<br>";
+        echo "<summary>$indent$var_name $type = &amp;$real_name</summary>";
     }
     else
     {
@@ -50,7 +52,7 @@ function cheapass_krumo(&$var, $var_name = NULL, $indent = NULL, $reference = NU
         if(is_array($avar))
         {
             $count = count($avar);
-            echo "$indent" . ($var_name ? "$var_name => ":"") . "$type ($count)<br>$indent(<br>";
+            echo "$indent<summary>" . ($var_name ? "$var_name => ":"") . "$type ($count)</summary>$indent(<br>";
             $keys = array_keys($avar);
             foreach($keys as $name)
             {
@@ -74,5 +76,7 @@ function cheapass_krumo(&$var, $var_name = NULL, $indent = NULL, $reference = NU
 
         $var = $var[$keyvar];
     }
+    
+    echo '</details>';
 
 }
