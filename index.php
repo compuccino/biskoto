@@ -44,5 +44,17 @@
     </ul>
   </details>
   
+  <?php
+  
+    //TODO: better testcase dummies
+    include('dummy-var.php'); //loads dummy object $var
+  
+    //TODO: iterate over var
+    //TODO: get type
+    //TODO: get length
+    //TODO: if string = escape + wrap in <pre>
+  
+  ?>
+  
 </body>
 </html>
