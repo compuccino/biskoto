@@ -48,11 +48,11 @@
   
     //TODO: better testcase dummies
     include('dummy-var.php'); //loads dummy object $var
+    
+    include('do_dump.php'); //loads original `do_dump()` function
+    include('cheapass_krumo.php'); //loads modified krumo function
   
-    //TODO: iterate over var
-    //TODO: get type
-    //TODO: get length
-    //TODO: if string = escape + wrap in <pre>
+    cheapass_krumo($var);
   
   ?>
   
