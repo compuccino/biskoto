@@ -18,6 +18,8 @@
 <body>
   <h1>Baum</h1>
   
+  Markup demos w/ <code>&lt;details&gt;</code>
+  
   <details>
     <summary>Key (type)</summary>
     Content
@@ -26,5 +28,21 @@
       Content
     </details>
   </details>
+  
+  <details>
+    <summary>Key (type)</summary>
+    <ul>
+      <li>
+        Content
+      </li>
+      <li>
+        <details>
+          <summary>Key</summary>
+          Content
+        </details>
+      </li>
+    </ul>
+  </details>
+  
 </body>
 </html>
