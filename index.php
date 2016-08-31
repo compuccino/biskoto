@@ -128,7 +128,7 @@
     //TODO: better testcase dummies
     include('dummy-var.php'); //loads dummy object $var
     
-    include('do_dump.php'); //loads original `do_dump()` function
+    //include('do_dump.php'); //loads original `do_dump()` function
     include('cheapass_krumo.php'); //loads modified krumo function
   
     cheapass_krumo($var);
