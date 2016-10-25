@@ -64,7 +64,7 @@ function cheapass_krumo(&$var, $var_name = NULL, $indent = NULL, $reference = NU
         elseif(is_object($avar))
         {
             echo "$indent$var_name $type<br>$indent(<br>";
-            foreach($avar as $name=>$value) do_dump($value, "$name", $indent.$do_dump_indent, $reference);
+            foreach($avar as $name=>$value) cheapass_krumo($value, "$name", $indent.$do_dump_indent, $reference);
             echo "$indent)<br>";
         }
         elseif(is_int($avar)) echo "$indent$var_name = <span style='color:#666666'>$type(".strlen($avar).")</span> $type_color".htmlentities($avar)."</span><br>";
