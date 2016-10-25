@@ -23,7 +23,7 @@
  */
 function cheapass_krumo(&$var, $var_name = NULL, $indent = NULL, $reference = NULL)
 {
-    $do_dump_indent = "&nbsp;&nbsp;";
+    $do_dump_indent = "  ";
     $reference = $reference.$var_name;
     $keyvar = 'the_do_dump_recursion_protection_scheme'; $keyname = 'referenced_object_name';
 
