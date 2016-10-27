@@ -58,7 +58,7 @@ cheapass_krumo($var);
     //TODO: do a regex against the tree
     //TODO: save position in tree via imploded arrays: ['1,2,3','0,0,2,0','1,2']
     //TODO: iterate over the findings by adding a „found“ class to the corresponding detail branches
-    var findString = function(element,childSelector){
+    var findString = function(element){
       //search only 1st level elements
       //TODO: `:scope` support isn't robust, one should run a filter on `.children`
       var searchElements = element.querySelectorAll(':scope > dl > *, :scope > summary');
@@ -73,7 +73,11 @@ cheapass_krumo($var);
         }
       });
       
-      //TODO: check on childSelector, call itself again
+      //recursively scan child trees
+      var childTrees = element.querySelectorAll(':scope > dl > dd > details');
+      Array.prototype.forEach.call ( childTrees, function (childTree, index) {
+        findString(childTree);
+      });
       
     }
     
