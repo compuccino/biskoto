@@ -1,6 +1,20 @@
 # Biskoto
 
-Krumo Alternative.
+Slim [Krumo](http://krumo.kaloyan.info/) alternative with live search
+
+![Demo GIF](doc/biskoto-search.gif)
+
+## Purpose
+
+Having a mroe performant tool to handle searching through PHP `var_dump()`-trees than Krumo. 
+
+This is done by using the `<details>` HTML5 element which allows for nesting drop-down-infos natively, eg. without Javascript helpers.
+
+[More Information about `<details>` and current browser support](file:///Users/Florian/Library/Application%20Support/Dash/DocSets/HTML/HTML.docset/Contents/Resources/Documents/developer.mozilla.org/en-US/docs/Web/HTML/Element/details.html).
+
+## Live Search
+
+Sadly, browser search doesn't work on hidden `<details>` elements, so we implemented a very simple script.
 
 ## Why that name?
 
