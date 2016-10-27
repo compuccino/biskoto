@@ -6,7 +6,7 @@ Slim [Krumo](http://krumo.kaloyan.info/) alternative with live search
 
 ## Purpose
 
-Having a mroe performant tool to handle searching through PHP `var_dump()`-trees than Krumo. 
+Having a more performant tool to handle searching through PHP `var_dump()`-trees than Krumo. 
 
 This is done by using the `<details>` HTML5 element which allows for nesting drop-down-infos natively, eg. without Javascript helpers.
 
