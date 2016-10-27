@@ -1,4 +1,4 @@
-<details>
+<details class='biskoto-search'>
   <summary>
     array(35)
   </summary>
