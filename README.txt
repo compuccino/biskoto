@@ -16,6 +16,8 @@ This is done by using the `<details>` HTML5 element which allows for nesting dro
 
 Sadly, browser search doesn't work on hidden `<details>` elements, so we implemented a very simple script.
 
+Drupal users devised a [similar approach](https://www.drupal.org/project/search_krumo).
+
 ## Why that name?
 
 [Biskoto](https://io.wikipedia.org/wiki/Biskoto) means “rusk” in [Ido](https://en.wikipedia.org/wiki/Ido_language). [Krumo](https://io.wikipedia.org/wiki/Krumo) translates to “inside of bread” (as opposed to [crust](https://en.wikipedia.org/wiki/Bread#Crust)) in that language. 
