@@ -7,6 +7,14 @@
       font-family: sans-serif;
       line-height: 1.4em;
     }
+
+    .string, .object, .array, .integer, .double, .boolean{
+      width: 100%;
+    }
+
+    .string > pre {
+      display: inline;
+    }
     
     summary {
       outline: none;
