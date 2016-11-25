@@ -28,22 +28,22 @@
   Markup demos w/ <code>&lt;details&gt;</code>
 
   <?php
-  
 
-include 'markup.inc';
+    /*include 'markup.inc';*/
   
     //TODO: better testcase dummies
     include('dummy-var.php'); //loads dummy object $var
     
     //include('do_dump.php'); //loads original `do_dump()` function
-    include('cheapass_krumo.php'); //loads modified krumo function
+    include('biskoto.php'); //loads modified krumo function
   
-cheapass_krumo($var);
+    $biskoto = new Biskoto();
+    echo "<div class='biskoto-search'>" . $biskoto->createHtml($var, 100) . "</div>";
   
   ?>
 <script>
   
-  var dataElements = document.querySelectorAll('.biskoto-search');
+  var dataElements = document.querySelectorAll('.biskoto-search > details');
   
   var searchElement = document.createElement('input');
   
