@@ -11,7 +11,7 @@ class Biskoto{
     function __construct(){
     }
 
-    function createHtml(&$var, $deep){
+    function createHtml(&$var, $deep = 100){
         $resultHtml = "";
         $props = "";
         switch(gettype($var)){
